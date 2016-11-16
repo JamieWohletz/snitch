@@ -2,3 +2,4 @@
 .idea
 .sencha
 .vscode
+node_modules
