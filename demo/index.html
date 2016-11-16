@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Snitch Demo</title>
+    <link href="demo.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="bordered">
+    <div id="event-area" class="bordered">
+        <h3>Click or type inside of this box to see event information!</h3>
+        <img src="http://lorempixel.com/350/350"/>
+        <br/>
+        <button>Button</button>
+        <label for="sample-input">Input</label>
+        <input id="sample-input" type="text"/>
+        <label for="password">Masked password input</label>
+        <input id="masked-password-input" class="mask" type="password"/>
+    </div>
+    <div class="bordered">
+        <h3>Event log</h3>
+        <ul id="event-log"></ul>
+    </div>
+</div>
+<div class="bordered">
+    <button onclick="throwRandomError()">Trigger a Random Error</button>
+</div>
+<div class="bordered">
+    <h3>Error Log</h3>
+    <ul id="error-log"></ul>
+</div>
+<script src="vendor/snitch.js"></script>
+<script src="demo.js"></script>
+</body>
+</html>
