@@ -74,14 +74,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    cacheBuster += 1;
 	    return cacheBuster;
 	  };
-	} /**
-	   * Snitchjs.
-	   *
-	   * Error logging and event tracking for the browser.
-	   *
-	   * Copyright Jamie Wohletz 2016.
-	   * MIT License.
-	   */
+	}
 
 	function buildErrorLog(error, screenshotDataURL) {
 	  var log = {
@@ -145,6 +138,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    window.removeEventListener('error', handler);
 	    window.addEventListener('error', handler);
 	  },
+
 	  /**
 	   * Logs user events as they happen by requesting the image at `pixelPath`
 	   * with a query string appended to the path.
