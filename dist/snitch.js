@@ -61,10 +61,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	'use strict';
 
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
 	var _html2canvas = __webpack_require__(1);
 
 	function buster() {
@@ -109,7 +105,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  return [tagName, id, classes].join('');
 	}
 
-	exports.default = {
+	module.exports = {
 	  /**
 	   * Listen for global JavaScript errors and build a detailed error log object
 	   * when any are thrown.

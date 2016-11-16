@@ -42,7 +42,7 @@ function selector(element) {
   return [tagName, id, classes].join('');
 }
 
-export default {
+module.exports = {
   /**
    * Listen for global JavaScript errors and build a detailed error log object
    * when any are thrown.
