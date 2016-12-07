@@ -37,6 +37,7 @@ function maskData(normalizedEvent) {
     });
     return masked;
   }
+
   const maskedData = mask(normalizedEvent.data);
   return Object.assign({}, normalizedEvent, dataWrap(maskedData));
 }
@@ -100,8 +101,8 @@ function normalizeUIEvent(e = {}) {
   if (event instanceof MouseEvent) {
     return Object.assign(base,
       dataWrap({
-        x: e.clientX,
-        y: e.clientY
+        clientX: e.clientX,
+        clientY: e.clientY
       })
     );
   }
@@ -160,7 +161,10 @@ function onInteraction(target, callback, options = { maskClass: null }) {
   const handler = function interactionHandler(event = {}) {
     const evtTarget = event.target || {};
     let normalized = normalize(event);
-    if (evtTarget instanceof EventTarget && evtTarget.classList.contains(options.maskClass)) {
+    if (evtTarget instanceof EventTarget &&
+      evtTarget.classList &&
+      evtTarget.classList.contains(options.maskClass)
+    ) {
       normalized = maskData(normalized);
     }
     callback.call(event, normalized, event);

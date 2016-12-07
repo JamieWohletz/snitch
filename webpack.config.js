@@ -22,7 +22,7 @@ if (env === 'production') {
   outputFile = `${libraryName}.js`;
   outPath = dist;
 } else if (env === 'demo') {
-  outputFile = `${libraryName}.js`
+  outputFile = `${libraryName}.js`;
   outPath = demo;
 }
 

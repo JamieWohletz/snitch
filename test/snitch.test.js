@@ -66,8 +66,8 @@ describe('snitch', function () {
         type: 'mousedown',
         target: '',
         data: {
-          x: data.clientX,
-          y: data.clientY
+          clientX: data.clientX,
+          clientY: data.clientY
         }
       });
     });
@@ -227,8 +227,8 @@ describe('snitch', function () {
     });
     it('gives x and y for mousedown events', function (done) {
       var coords = {
-        x: 5,
-        y: 5
+        clientX: 5,
+        clientY: 5
       };
       var handler = snitch.onInteraction(document.body, function (normalized) {
         assertNormalized(normalized);
@@ -242,8 +242,8 @@ describe('snitch', function () {
         done();
       });
       document.body.dispatchEvent(new MouseEvent('mousedown', {
-        clientX: coords.x,
-        clientY: coords.y
+        clientX: coords.clientX,
+        clientY: coords.clientY
       }));
     });
     it('gives deltas for wheel events', function (done) {
